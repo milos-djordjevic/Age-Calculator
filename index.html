@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./output/style.css" />
+    <title>Age Calculator</title>
+  </head>
+  <body
+    class="font-poppins bg-lightGray px-4 pt-20 min-h-screen md:px-0 md:pt-0 md:flex md:justify-center md:items-center"
+  >
+    <div
+      class="w-full h-[400px] bg-white px-5 py-10 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-[90px] md:rounded-br-[160px] md:w-[700px] md:h-[500px] md:p-10"
+    >
+      <div class="mb-10 md:mb-5">
+        <div class="w-full flex justify-between items-center md:w-3/4">
+          <div class="space-y-1 flex flex-col relative">
+            <label id="day-label" class="uppercase text-smokeyGray text-xs"
+              >Day</label
+            >
+            <input
+              type="number"
+              placeholder="DD"
+              id="days"
+              class="w-[80px] p-3 rounded-[4px] border-2 border-lightGray placeholder:text-smokeyGray md:w-[100px] focus:outline-none focus:border-purple"
+            />
+          </div>
+
+          <div class="space-y-1 flex flex-col relative">
+            <label id="month-label" class="uppercase text-smokeyGray text-xs"
+              >Month</label
+            >
+            <input
+              type="number"
+              placeholder="MM"
+              id="months"
+              class="w-[80px] p-3 rounded-[4px] border-2 border-lightGray placeholder:text-smokeyGray md:w-[100px] focus:outline-none focus:border-purple"
+            />
+          </div>
+          <div class="space-y-1 flex flex-col relative">
+            <label id="year-label" class="uppercase text-smokeyGray text-xs"
+              >Year</label
+            >
+            <input
+              type="number"
+              placeholder="YYYY"
+              id="years"
+              class="w-[80px] p-3 rounded-[4px] border-2 border-lightGray placeholder:text-smokeyGray md:w-[100px] focus:outline-none focus:border-purple"
+            />
+          </div>
+        </div>
+
+        <div class="w-full flex justify-between items-center mt-1 md:w-3/4">
+          <p class="error-message text-lightRed text-xs opacity-0">
+            This field is required
+          </p>
+          <p class="error-message text-lightRed text-xs opacity-0">
+            This field is required
+          </p>
+          <p class="error-message text-lightRed text-xs opacity-0">
+            This field is required
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full mb-12 relative md:mb-10">
+        <hr class="w-[90%] h-[2px] bg-lightGray" />
+        <button
+          id="submit-btn"
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[70px] h-[70px] rounded-full bg-purple cursor-pointer flex justify-center items-center transition duration-200 ease-in-out md:left-auto md:translate-x-0 md:right-0 hover:bg-offBlack"
+        >
+          <img src="./img/icon-arrow.svg" alt="arrow icon" class="w-7 md:w-8" />
+        </button>
+      </div>
+
+      <div>
+        <div class="flex items-center space-x-2">
+          <div class="date-placeholder flex items-center space-x-4">
+            <div class="w-[30px] h-[10px] bg-purple rotate-2"></div>
+            <div class="w-[30px] h-[10px] bg-purple rotate-2"></div>
+          </div>
+
+          <p id="year-result" class="hidden text-purple text-5xl font-bold"></p>
+
+          <p
+            class="text-offBlack text-5xl italic font-extrabold md:text-[50px]"
+          >
+            years
+          </p>
+        </div>
+        <div class="flex items-center space-x-2">
+          <div class="date-placeholder flex items-center space-x-4">
+            <div class="w-[30px] h-[10px] bg-purple rotate-2"></div>
+            <div class="w-[30px] h-[10px] bg-purple rotate-2"></div>
+          </div>
+
+          <p
+            id="month-result"
+            class="hidden text-purple text-5xl font-bold"
+          ></p>
+
+          <p
+            class="text-offBlack text-5xl italic font-extrabold md:text-[50px]"
+          >
+            months
+          </p>
+        </div>
+        <div class="flex items-center space-x-2">
+          <div class="date-placeholder flex items-center space-x-4">
+            <div class="w-[30px] h-[10px] bg-purple rotate-2"></div>
+            <div class="w-[30px] h-[10px] bg-purple rotate-2"></div>
+          </div>
+
+          <p id="day-result" class="hidden text-purple text-5xl font-bold"></p>
+
+          <p
+            class="text-offBlack text-5xl italic font-extrabold md:text-[50px]"
+          >
+            days
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
